@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/css/bootstrap.min.css" rel="stylesheet">
+
+    <title>Sign In</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-5">
+          <h2 class="text-center my-4">Sign In</h2>
+          <form id="signInForm">
+            <div class="mb-3">
+              <label for="inputName" class="form-label">Nombre</label>
+              <input type="text" class="form-control" id="inputName" required>
+            </div>
+            <div class="mb-3">
+              <label for="inputLastName" class="form-label">Apellido</label>
+              <input type="text" class="form-control" id="inputLastName" required>
+            </div>
+            <div class="mb-3">
+              <label for="inputEmail" class="form-label">Correo</label>
+              <input type="email" class="form-control" id="inputEmail" required>
+            </div>
+            <div class="mb-3">
+              <label for="inputPassword" class="form-label">Contraseña</label>
+              <input type="password" class="form-control" id="inputPassword" required>
+            </div>
+            <div class="mb-3">
+              <label for="inputPasswordConfirm" class="form-label">Confirmar Contraseña</label>
+              <input type="password" class="form-control" id="inputPasswordConfirm" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Aceptar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/js/bootstrap.min.js"></script>
+
+    <!-- Form Validation -->
+    <script>
+      document.getElementById('signInForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        var password = document.getElementById('inputPassword').value;
+        var confirmPassword = document.getElementById('inputPasswordConfirm').value;
+
+        if (password !== confirmPassword) {
+          alert('Las contraseñas no coinciden.');
+          return false;
+        } else {
+          // Redirigir a la nueva página
+          window.location.href = 'pagina_siguiente.html';
+        }
+      });
+    </script>
+  </body>
+</html>
