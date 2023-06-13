@@ -4,7 +4,7 @@ const net = require('net');
 const server = net.createServer((socket) => {
   // Evento 'data': se ejecuta cuando se reciben datos desde un cliente
   socket.on('data', (data) => {
-    console.log(`Datos recibidos desde el cliente: ${data}`);
+    console.log(`\nDatos recibidos desde el cliente: ${data}`)
     socket.write("bienvenido usuario")//funcion para escribir
   });
 

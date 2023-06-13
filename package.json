@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/STUBBYJUPITER/Drawing-App-JavaScript/issues"
   },
-  "homepage": "https://github.com/STUBBYJUPITER/Drawing-App-JavaScript#readme"
+  "homepage": "https://github.com/STUBBYJUPITER/Drawing-App-JavaScript#readme",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
 }
